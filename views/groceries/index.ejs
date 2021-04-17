@@ -1,0 +1,27 @@
+<body>
+    <h1>Grocery List</h1>
+    <ul>
+        <h2>Under 10 Dollars</h2>
+        <% groceryList.forEach(function(grocery){ %>
+            <%if (grocery.price < 10) { %>
+                <li>
+                    <%=grocery.item %>
+                        - $
+                        <%=grocery.price %>
+                            <% } %>
+                </li>
+                <% }); %>
+    </ul>
+
+    <ul>
+        <h2> At or over 10 Dollars</h2>
+        <% groceryList.forEach(function(grocery){ %>
+            <%if (grocery.price>= 10){ %>
+                <li>
+                    <%=grocery.item%>
+                        - $
+                        <%=grocery.price %>
+                </li>
+                <% }}) %>
+    </ul>
+</body>
